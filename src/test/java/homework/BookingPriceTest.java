@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 //        3. Отфильтровать отели с максимальной стоимостью
 //        4. Отсортировать по стоимости начиная с самого дешевого и проверить, что его стоимость ночи >= максимальной
 
-public class BookingTest {
+public class BookingPriceTest {
 
     private static WebDriver driver;
 
@@ -46,10 +46,12 @@ public class BookingTest {
 
         try {
             driver.findElement(By.xpath("//label[@id='xp__guests__toggle']")).click();
-            WebElement addGuest = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-adults']//button[@data-bui-ref='input-stepper-add-button']"));
+            WebElement addGuest = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-adults']" +
+                    "//button[@data-bui-ref='input-stepper-add-button']"));
             addGuest.click();
             addGuest.click();
-            WebElement addRoom = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-rooms']//button[@data-bui-ref='input-stepper-add-button']"));
+            WebElement addRoom = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-rooms']" +
+                    "//button[@data-bui-ref='input-stepper-add-button']"));
             addRoom.click();
             driver.findElement(By.xpath("//div[@class='xp__dates-inner']")).click();
         } catch (NoSuchElementException e) {
