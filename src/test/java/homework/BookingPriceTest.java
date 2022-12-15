@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BookingPriceTest {
 
-    private static WebDriver driver;
+    private WebDriver driver;
 
     @Before
     public void openBrowser() {
@@ -32,11 +32,11 @@ public class BookingPriceTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
-        driver.get("https://booking.com/");
     }
 
     @Test
     public void priceCheck() {
+        driver.get("https://booking.com/");
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         cal.add(Calendar.DATE,3);

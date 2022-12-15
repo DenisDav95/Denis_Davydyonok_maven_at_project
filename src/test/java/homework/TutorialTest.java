@@ -17,31 +17,33 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class TutorialTest {
 
-    private static WebDriver driver;
+    private WebDriver driver;
 
     @Before
-    public void openBrowser() {
+    public void openBrowser() throws MalformedURLException {
+//        driver = new RemoteWebDriver(new URL("http://localhost:9515"), new ChromeOptions());
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
-        driver.get("https://www.w3schools.com/java/");
     }
 
     @Test
-    public void tutorialCheck() {
-
+    public void tutorialCheck() throws InterruptedException {
+        driver.get("https://www.w3schools.com/java/");
         WebElement title = driver.findElement(By.xpath("//span[@class='color_h1']"));
         Actions action = new Actions(driver);
         action
@@ -51,12 +53,9 @@ public class TutorialTest {
                 .keyUp(Keys.LEFT_CONTROL)
                 .build()
                 .perform();
+        Thread.sleep(1000);
 
         driver.get("https://www.google.com/");
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        new WebDriverWait(driver, 1000).until(
-                ExpectedConditions.elementToBeClickable(By.name("q")));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebElement searchField = driver.findElement(By.name("q"));
         action
                 .click(searchField)
@@ -66,6 +65,7 @@ public class TutorialTest {
                 .sendKeys(Keys.ENTER)
                 .build()
                 .perform();
+        Thread.sleep(1000);
 
         List<WebElement> titles = driver.findElements(By.xpath("//div[@data-header-feature='0']//h3"));
 
