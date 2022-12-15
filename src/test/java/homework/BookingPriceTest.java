@@ -70,7 +70,7 @@ public class BookingPriceTest {
         search.sendKeys("Париж");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        Double pricePerDay = Double.parseDouble(driver.findElement(By.xpath("//div[@data-testid='filters-sidebar']" +
+        double pricePerDay = Double.parseDouble(driver.findElement(By.xpath("//div[@data-testid='filters-sidebar']" +
                 "/div[2]//div[@data-filters-item='pri:pri=5']" +
                 "//div[@data-testid='filters-group-label-content']"))
                         .getText()
@@ -91,7 +91,7 @@ public class BookingPriceTest {
                 ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        Double priceHotel = Double.parseDouble(driver.findElement(By.xpath("//div[@data-block-id='hotel_list']" +
+        double priceHotel = Double.parseDouble(driver.findElement(By.xpath("//div[@data-block-id='hotel_list']" +
                         "//div[@data-testid='property-card'][1]" +
                         "//span[@data-testid='price-and-discounted-price']"))
                 .getText()
