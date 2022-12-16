@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
@@ -31,14 +32,18 @@ public class DemogaTest {
         driver.findElement(By.cssSelector("#selectOne")).click();
         driver.findElement(By.xpath("//div[@id='react-select-3-option-0-1']")).click();
 
-        driver.findElement(By.xpath("//select[@id='oldSelectMenu']/option[@value='4']")).click();
+        WebElement oldSelect = driver.findElement(By.id("oldSelectMenu"));
+        Select selectThree = new Select(oldSelect);
+        selectThree.selectByValue("2");
 
         driver.findElement(By.xpath("//b[contains(text(), 'Multiselect drop down')]/../..//div[contains(@class, 'control')]")).click();
         driver.findElement(By.xpath("//div[@id='react-select-4-option-0']")).click();
         driver.findElement(By.xpath("//div[@id='react-select-4-option-1']")).click();
 
-        driver.findElement(By.xpath("//option[@value='saab']")).click();
-        driver.findElement(By.xpath("//option[@value='audi']")).click();
+        WebElement multiSelect = driver.findElement(By.id("cars"));;
+        Select selectFive = new Select(multiSelect);
+        selectFive.selectByValue("saab");
+        selectFive.selectByValue("opel");
     }
 
     @After
