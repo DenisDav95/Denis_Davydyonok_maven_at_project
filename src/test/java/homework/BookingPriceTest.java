@@ -21,9 +21,9 @@ import java.util.concurrent.TimeUnit;
 //        3. Отфильтровать отели с максимальной стоимостью
 //        4. Отсортировать по стоимости начиная с самого дешевого и проверить, что его стоимость ночи >= максимальной
 
-public class BookingTest {
+public class BookingPriceTest {
 
-    private static WebDriver driver;
+    private WebDriver driver;
 
     @Before
     public void openBrowser() {
@@ -32,11 +32,11 @@ public class BookingTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
-        driver.get("https://booking.com/");
     }
 
     @Test
     public void priceCheck() {
+        driver.get("https://booking.com/");
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         cal.add(Calendar.DATE,3);
@@ -46,10 +46,12 @@ public class BookingTest {
 
         try {
             driver.findElement(By.xpath("//label[@id='xp__guests__toggle']")).click();
-            WebElement addGuest = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-adults']//button[@data-bui-ref='input-stepper-add-button']"));
+            WebElement addGuest = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-adults']" +
+                    "//button[@data-bui-ref='input-stepper-add-button']"));
             addGuest.click();
             addGuest.click();
-            WebElement addRoom = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-rooms']//button[@data-bui-ref='input-stepper-add-button']"));
+            WebElement addRoom = driver.findElement(By.xpath("//div[@class='sb-group__field sb-group__field-rooms']" +
+                    "//button[@data-bui-ref='input-stepper-add-button']"));
             addRoom.click();
             driver.findElement(By.xpath("//div[@class='xp__dates-inner']")).click();
         } catch (NoSuchElementException e) {
@@ -68,7 +70,7 @@ public class BookingTest {
         search.sendKeys("Париж");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
-        Double pricePerDay = Double.parseDouble(driver.findElement(By.xpath("//div[@data-testid='filters-sidebar']" +
+        double pricePerDay = Double.parseDouble(driver.findElement(By.xpath("//div[@data-testid='filters-sidebar']" +
                 "/div[2]//div[@data-filters-item='pri:pri=5']" +
                 "//div[@data-testid='filters-group-label-content']"))
                         .getText()
@@ -89,7 +91,7 @@ public class BookingTest {
                 ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        Double priceHotel = Double.parseDouble(driver.findElement(By.xpath("//div[@data-block-id='hotel_list']" +
+        double priceHotel = Double.parseDouble(driver.findElement(By.xpath("//div[@data-block-id='hotel_list']" +
                         "//div[@data-testid='property-card'][1]" +
                         "//span[@data-testid='price-and-discounted-price']"))
                 .getText()
