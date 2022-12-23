@@ -8,10 +8,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import pages.VoidBookingLoginPage;
-import pages.VoidBookingPersonalDetailsPage;
-import pages.VoidBookingRegisterPage;
-import pages.VoidPOYopmailPage;
+import pages.BookingLoginPage;
+import pages.BookingPersonalDetailsPage;
+import pages.BookingRegisterPage;
+import pages.POYopmailPage;
 import settings.ConfigProperties;
 
 import java.util.concurrent.TimeUnit;
@@ -19,10 +19,10 @@ import java.util.concurrent.TimeUnit;
 
 public class BookingRegisterSteps {
 
-    private VoidPOYopmailPage emailPage = new VoidPOYopmailPage();
-    private VoidBookingRegisterPage registerPage = new VoidBookingRegisterPage();
-    private VoidBookingLoginPage loginPage = new VoidBookingLoginPage();
-    private VoidBookingPersonalDetailsPage personalDetailsPage = new VoidBookingPersonalDetailsPage();
+    private POYopmailPage emailPage = new POYopmailPage();
+    private BookingRegisterPage registerPage = new BookingRegisterPage();
+    private BookingLoginPage loginPage = new BookingLoginPage();
+    private BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
 
     @Before
     public static void initDriver() {

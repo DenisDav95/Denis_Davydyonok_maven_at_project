@@ -6,7 +6,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import settings.ConfigProperties;
 
-public class VoidBookingPersonalDetailsPage {
+public class BookingPersonalDetailsPage {
 
     WebDriver driver = Driver.getDriver();
 

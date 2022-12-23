@@ -1,19 +1,26 @@
 package tests.testng;
 
-import pages.VoidBookingLoginPage;
-import pages.VoidBookingPersonalDetailsPage;
-import pages.VoidBookingRegisterPage;
-import pages.VoidPOYopmailPage;
+import driver.Config;
+import driver.Driver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import pages.BookingLoginPage;
+import pages.BookingPersonalDetailsPage;
+import pages.BookingRegisterPage;
+import pages.POYopmailPage;
 import org.testng.annotations.Test;
 import settings.ConfigProperties;
+
+import java.util.concurrent.TimeUnit;
+
 import static org.testng.AssertJUnit.*;
 
-public class RegisterTest extends BaseTest {
+public class RegisterTest extends BaseTest{
 
-    private VoidPOYopmailPage emailPage = new VoidPOYopmailPage();
-    private VoidBookingRegisterPage registerPage = new VoidBookingRegisterPage();
-    private VoidBookingLoginPage loginPage = new VoidBookingLoginPage();
-    private VoidBookingPersonalDetailsPage personalDetailsPage = new VoidBookingPersonalDetailsPage();
+    private POYopmailPage emailPage = new POYopmailPage();
+    private BookingRegisterPage registerPage = new BookingRegisterPage();
+    private BookingLoginPage loginPage = new BookingLoginPage();
+    private BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
 
     @Test
     public void bookingRegistration() throws InterruptedException {

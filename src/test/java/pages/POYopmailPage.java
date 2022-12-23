@@ -7,7 +7,7 @@ import settings.ConfigProperties;
 
 import java.util.ArrayList;
 
-public class VoidPOYopmailPage {
+public class POYopmailPage {
 
     WebDriver driver = Driver.getDriver();
 

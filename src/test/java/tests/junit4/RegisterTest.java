@@ -1,19 +1,19 @@
 package tests.junit4;
 
-import pages.VoidBookingLoginPage;
-import pages.VoidBookingPersonalDetailsPage;
-import pages.VoidBookingRegisterPage;
-import pages.VoidPOYopmailPage;
+import pages.BookingLoginPage;
+import pages.BookingPersonalDetailsPage;
+import pages.BookingRegisterPage;
+import pages.POYopmailPage;
 import org.junit.Assert;
 import org.junit.Test;
 import settings.ConfigProperties;
 
 public class RegisterTest extends BaseTest{
 
-    private VoidPOYopmailPage emailPage = new VoidPOYopmailPage();
-    private VoidBookingRegisterPage registerPage = new VoidBookingRegisterPage();
-    private VoidBookingLoginPage loginPage = new VoidBookingLoginPage();
-    private VoidBookingPersonalDetailsPage personalDetailsPage = new VoidBookingPersonalDetailsPage();
+    private POYopmailPage emailPage = new POYopmailPage();
+    private BookingRegisterPage registerPage = new BookingRegisterPage();
+    private BookingLoginPage loginPage = new BookingLoginPage();
+    private BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
 
     @Test
     public void bookingRegistration() throws InterruptedException {

@@ -13,5 +13,5 @@ import org.junit.runner.RunWith;
         },
         strict = true)
 
-public class RunTests {
+public class BookingCucumberSuite {
 }
