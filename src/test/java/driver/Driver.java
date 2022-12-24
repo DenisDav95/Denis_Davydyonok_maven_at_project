@@ -6,15 +6,15 @@ public class Driver {
 
     private static WebDriver driver;
 
-    public static void initDriver(Config config) {
+    public static void closeDriver() {
+        driver.quit();
+    }
+
+    public static WebDriver getDriver(Config config) {
         if (driver == null) {
             driver = DriverManager.getDriver(config);
         }
-    }
-
-    public static void closeDriver() {
-//        driver.close();
-        driver.quit();
+        return driver;
     }
 
     public static WebDriver getDriver() {

@@ -1,5 +1,6 @@
 package pages;
 
+import driver.Config;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,7 @@ import settings.ConfigProperties;
 
 public class BookingLoginPage {
 
-    WebDriver driver = Driver.getDriver();
+    WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
 
     public void openPage() {
         driver.get(ConfigProperties.property.getProperty("bookingLoginUrl"));

@@ -2,6 +2,7 @@ package tests.testng;
 
 import driver.Config;
 import driver.Driver;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import settings.ConfigProperties;
@@ -13,7 +14,7 @@ public class BaseTest {
     @BeforeClass
     public static void initDriver() {
         ConfigProperties.initPropertyFile();
-        Driver.initDriver(Config.valueOf(ConfigProperties.property.getProperty("BROWSER")));
+        WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);

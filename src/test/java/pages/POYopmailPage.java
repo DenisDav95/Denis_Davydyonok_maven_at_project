@@ -1,5 +1,6 @@
 package pages;
 
+import driver.Config;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 
 public class POYopmailPage {
 
-    WebDriver driver = Driver.getDriver();
+    WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
 
     public void openPage(){
         driver.get(ConfigProperties.property.getProperty("emailUrl"));
@@ -38,8 +39,4 @@ public class POYopmailPage {
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
     }
-
-
-
-
 }

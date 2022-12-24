@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import pages.BookingLoginPage;
 import pages.BookingPersonalDetailsPage;
 import pages.BookingRegisterPage;
@@ -27,7 +28,7 @@ public class BookingRegisterSteps {
     @Before
     public static void initDriver() {
         ConfigProperties.initPropertyFile();
-        Driver.initDriver(Config.valueOf(ConfigProperties.property.getProperty("BROWSER")));
+        WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
         Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         Driver.getDriver().manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
