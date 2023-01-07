@@ -49,9 +49,9 @@ public class BookingColorTest {
         Assert.assertEquals("Цвет названия не красного цвета", "color: red;", color);
     }
 
-    @After
-    public void closeBrowse() {
-        driver.close();
-        driver.quit();
-    }
+//    @After
+//    public void closeBrowse() {
+//        driver.close();
+//        driver.quit();
+//    }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe>
+    <recipename>Borsch</recipename>
+    <ingredlist>
+        <listitem>
+            <quantity>150</quantity>
+            <itemdescription>beef</itemdescription>
+        </listitem>
+        <listitem>
+            <quantity>4</quantity>
+            <itemdescription>beetroots</itemdescription>
+        </listitem>
+        <listitem>
+            <quantity>3</quantity>
+            <itemdescription>potatoes</itemdescription>
+        </listitem>
+    </ingredlist>
+    <preptime>120 minutes</preptime>
+</recipe>
