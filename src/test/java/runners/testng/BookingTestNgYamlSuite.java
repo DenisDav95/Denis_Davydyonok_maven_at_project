@@ -11,7 +11,7 @@ public class BookingTestNgYamlSuite {
 
     public static void main(String[] args) throws IOException {
         final TestNG testNG = new TestNG(true);
-        final Parser parse = new Parser("src/test/java/settings/testng.yaml");
+        final Parser parse = new Parser("src/test/resources/settings/testng.yaml");
         final List<XmlSuite> suites = parse.parseToList();
         testNG.setXmlSuites(suites);
         testNG.run();

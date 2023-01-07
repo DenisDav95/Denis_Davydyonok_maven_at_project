@@ -1,17 +1,11 @@
 package tests.testng;
 
-import driver.Config;
-import driver.Driver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import pages.BookingLoginPage;
 import pages.BookingPersonalDetailsPage;
 import pages.BookingRegisterPage;
 import pages.POYopmailPage;
 import org.testng.annotations.Test;
-import settings.ConfigProperties;
-
-import java.util.concurrent.TimeUnit;
+import utils.ConfigProperties;
 
 import static org.testng.AssertJUnit.*;
 

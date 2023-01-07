@@ -4,7 +4,7 @@ import driver.Config;
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import settings.ConfigProperties;
+import utils.ConfigProperties;
 
 public class BookingLoginPage {
 

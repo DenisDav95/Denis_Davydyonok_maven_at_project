@@ -1,4 +1,4 @@
-package settings;
+package utils;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.util.Properties;
 public class ConfigProperties {
 
     public static Properties property;
-    private static String configPath = "src/test/java/settings/config.properties";
+    private static String configPath = "src/test/resources/settings/config.properties";
 
     public static void initPropertyFile() {
         property = new Properties();

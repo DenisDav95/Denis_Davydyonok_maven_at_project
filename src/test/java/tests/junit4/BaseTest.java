@@ -5,7 +5,7 @@ import driver.Driver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import settings.ConfigProperties;
+import utils.ConfigProperties;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {

@@ -1,7 +1,6 @@
-package databases;
+package classwork.databases;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
-import org.checkerframework.checker.units.qual.C;
 
 import java.io.FileInputStream;
 import java.io.IOException;

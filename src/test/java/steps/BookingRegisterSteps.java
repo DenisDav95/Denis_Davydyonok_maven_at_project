@@ -13,7 +13,7 @@ import pages.BookingLoginPage;
 import pages.BookingPersonalDetailsPage;
 import pages.BookingRegisterPage;
 import pages.POYopmailPage;
-import settings.ConfigProperties;
+import utils.ConfigProperties;
 
 import java.util.concurrent.TimeUnit;
 

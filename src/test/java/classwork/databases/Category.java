@@ -1,4 +1,4 @@
-package databases;
+package classwork.databases;
 
 public class Category {
 

@@ -11,7 +11,7 @@ public class BookingTestNgXmlSuite {
 
     public static void main(String[] args) throws IOException {
         final TestNG testNG = new TestNG(true);
-        final Parser parse = new Parser("src/test/java/settings/testng.xml");
+        final Parser parse = new Parser("src/test/resources/settings/testng.xml");
         final List<XmlSuite> suites = parse.parseToList();
         testNG.setXmlSuites(suites);
         testNG.run();

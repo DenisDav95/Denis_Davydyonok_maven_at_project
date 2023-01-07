@@ -6,7 +6,7 @@ import pages.BookingRegisterPage;
 import pages.POYopmailPage;
 import org.junit.Assert;
 import org.junit.Test;
-import settings.ConfigProperties;
+import utils.ConfigProperties;
 
 public class RegisterTest extends BaseTest{
 

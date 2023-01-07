@@ -1,4 +1,4 @@
-package classwork;
+package classwork.day19;
 
 import java.io.FileInputStream;
 import java.io.IOException;
