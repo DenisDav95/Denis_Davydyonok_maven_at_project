@@ -40,10 +40,10 @@ public class BookingRatingHotelTest {
         driver.findElement(By.xpath("//button[@data-testid='sorters-dropdown-trigger']")).click();
         driver.findElement(By.xpath("//button[contains(@data-id,'score')]")).click();
 //        driver.findElement(By.xpath("//button[@data-id='upsort_bh']")).click();
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        new WebDriverWait(driver, 1000).until(
-                ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+//        new WebDriverWait(driver, 1000).until(
+//                ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@data-testid='overlay-spinner']")));
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 //       WebElement sorterByScore = driver.findElement(By.xpath("//button[contains(@data-id,'score')]"));
 //        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", sorterByScore);
