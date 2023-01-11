@@ -22,12 +22,12 @@
                 <version>2.22.2</version>
                 <configuration>
                     <includes>
-<!--                        <include>BookingJunit4Suite.java</include>-->
-<!--                        <include>BookingCucumberSuite.java</include>-->
+                        <include>BookingJunit4Suite.java</include>
+                        <include>BookingCucumberSuite.java</include>
                     </includes>
                     <suiteXmlFiles>
                         <xmlFile>src/test/java/settings/testng.xml</xmlFile>
-<!--                        <xmlFile>src/test/java/settings/testng.yaml</xmlFile>-->
+                        <xmlFile>src/test/java/settings/testng.yaml</xmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

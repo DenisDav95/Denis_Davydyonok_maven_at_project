@@ -13,7 +13,7 @@ public class DefaultLogging {
 
     public static void main(String[] args) throws IOException {
         FileInputStream configFile = new
-                FileInputStream("src/test/resources/log.config");
+                FileInputStream("src/test/resources/classwork/logging/log.config");
         LogManager.getLogManager().readConfiguration(configFile);
         LOGGER.setLevel(Level.ALL);
 
@@ -25,8 +25,5 @@ public class DefaultLogging {
         LOGGER.log(Level.FINER,"Сообщение с уровнем FINER");
         LOGGER.log(Level.FINEST,"Сообщение с уровнем FINEST");
         LOGGER.log(Level.ALL,"Сообщение с уровнем ALL");
-
     }
-
-
 }

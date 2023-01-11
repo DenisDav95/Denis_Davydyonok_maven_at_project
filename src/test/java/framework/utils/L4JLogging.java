@@ -1,4 +1,4 @@
-package classwork.logging;
+package framework.utils;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -10,7 +10,7 @@ public class L4JLogging {
 
     public static void main(String[] args) {
 
-        String log4jConfPath = "src/test/resources/classwork/logging/log4j.properties";
+        String log4jConfPath = "src/test/resources/framework/settings/log4j.properties";
         PropertyConfigurator.configure(log4jConfPath);
 
         LOGGER.fatal("Сообщение с уровнем FATAL");

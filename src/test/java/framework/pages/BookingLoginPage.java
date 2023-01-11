@@ -27,6 +27,6 @@ public class BookingLoginPage {
     }
 
     public void closePopup() {
-        driver.findElement(By.xpath("//button[@title='Close']")).click();
+        driver.findElement(By.xpath("//button[@aria-label='Dismiss']")).click();
     }
 }
