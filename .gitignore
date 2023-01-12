@@ -1,4 +1,5 @@
 /target/
 /test-output/
-/src/test/resources/db.properties
 /lo4j.log
+/src/test/resources/classwork/databases/db.properties
+/log.0.txt
