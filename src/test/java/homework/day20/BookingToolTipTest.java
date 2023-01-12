@@ -1,4 +1,4 @@
-package homework;
+package homework.day20;
 
 //        1. Перейти на сайт https://booking.com
 //        2. Навести мышь на индикатор валюты

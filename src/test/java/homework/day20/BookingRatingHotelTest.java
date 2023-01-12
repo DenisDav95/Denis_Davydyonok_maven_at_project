@@ -1,4 +1,4 @@
-package homework;
+package homework.day20;
 
 //        1. Перейти на сайт booking.com
 //        2. Ввести в поиск «Москва», выбрать для проживания 2 гостей и 1 номер.

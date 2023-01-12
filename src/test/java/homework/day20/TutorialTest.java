@@ -1,4 +1,4 @@
-package homework;
+package homework.day20;
 
 //        1. Перейти на сайт https://www.w3schools.com/java/
 //        2. Двойным кликом выделить в заголовке слово Tutorial
