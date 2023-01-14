@@ -27,8 +27,6 @@ public class RegisterTest extends BaseTest{
 
         emailPage.openPage();
         emailPage.createEmail(ConfigProperties.getValue("emailName"));
-//        Thread.sleep(6000);
-//        emailPage.refreshMailbox();
         emailPage.findEmail();
         emailPage.acceptRegistration();
 
