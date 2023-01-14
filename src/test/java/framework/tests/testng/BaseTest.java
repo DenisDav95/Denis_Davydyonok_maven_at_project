@@ -10,11 +10,11 @@ public class BaseTest {
 
     @BeforeClass
     public static void initDriver() {
-        WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
+
     }
 
-//    @AfterClass
-//    public static void closeDriver() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public static void closeDriver() {
+        Driver.closeDriver();
+    }
 }

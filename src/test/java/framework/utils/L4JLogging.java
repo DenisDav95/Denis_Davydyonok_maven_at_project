@@ -5,7 +5,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class L4JLogging {
 
-    private static final Logger LOGGER =
+    public static final Logger LOGGER =
             Logger.getLogger(L4JLogging.class.getName());
 
     public static void main(String[] args) {

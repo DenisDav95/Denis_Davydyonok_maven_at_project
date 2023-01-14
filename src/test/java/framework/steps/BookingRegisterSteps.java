@@ -24,7 +24,7 @@ public class BookingRegisterSteps {
 
     @Before
     public static void initDriver() {
-        WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
+
     }
 
     @Given("I register a new user")
@@ -41,8 +41,6 @@ public class BookingRegisterSteps {
     public void confirmEmail() throws InterruptedException {
         emailPage.openPage();
         emailPage.createEmail(ConfigProperties.getValue("emailName"));
-//        Thread.sleep(6000);
-//        emailPage.refreshMailbox();
         emailPage.findEmail();
         emailPage.acceptRegistration();
     }

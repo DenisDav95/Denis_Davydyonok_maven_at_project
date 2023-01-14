@@ -4,15 +4,17 @@ import framework.driver.Driver;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+import static framework.utils.L4JLogging.LOGGER;
+
 public class BaseTest {
 
     @BeforeClass
-    public static void initDriver() {
-//        WebDriver driver = Driver.getDriver(Config.valueOf(System.getenv("BROWSER")));
+    public static void setupLogging() {
+        LOGGER.info("Начало выполнения теста");
     }
 
-//    @AfterClass
-//    public static void closeDriver() {
-//        Driver.closeDriver();
-//    }
+    @AfterClass
+    public static void closeDriver() {
+        Driver.closeDriver();
+    }
 }
