@@ -19,6 +19,8 @@ public class RegisterTest extends BaseTest{
     private BookingLoginPage loginPage = new BookingLoginPage();
     private BookingPersonalDetailsPage personalDetailsPage = new BookingPersonalDetailsPage();
 
+
+
     @Test
     public void bookingRegistration() throws InterruptedException {
 
